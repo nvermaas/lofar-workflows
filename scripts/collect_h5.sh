@@ -1,0 +1,2 @@
+
+ls > outputs.txt
