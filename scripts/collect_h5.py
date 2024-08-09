@@ -21,10 +21,10 @@ plot3_path = os.path.join(the_dir,'plot3.png')
 
 # write outputs.txt file
 with open(outputs, 'w', encoding='utf-8') as output_file:
-    output_file.write(file_path)
-    output_file.write(plot1_path)
-    output_file.write(plot2_path)
-    output_file.write(plot3_path)
+    output_file.write(file_path + '\n')
+    output_file.write(plot1_path + '\n')
+    output_file.write(plot2_path + '\n')
+    output_file.write(plot3_path + '\n')
 
 # create the aggregated file (simulated)
 with open(file_path, 'w', encoding='utf-8') as output_file:
