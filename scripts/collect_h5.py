@@ -15,13 +15,29 @@ file_path = os.path.abspath('658583_aggregated.h5')
 the_dir = os.path.split(line)[0]
 file_path = os.path.join(the_dir,'658583_aggregated.h5')
 
+plot1_path = os.path.join(the_dir,'plot1.png')
+plot2_path = os.path.join(the_dir,'plot2.png')
+plot3_path = os.path.join(the_dir,'plot3.png')
+
 # write outputs.txt file
 with open(outputs, 'w', encoding='utf-8') as output_file:
     output_file.write(file_path)
+    output_file.write(plot1_path)
+    output_file.write(plot2_path)
+    output_file.write(plot3_path)
 
-# write the aggregated file (simulated)
+# create the aggregated file (simulated)
 with open(file_path, 'w', encoding='utf-8') as output_file:
     output_file.write('this is a simulated aggregated H5 file')
 
+# create plots (simulated)
+with open(plot1_path, 'w', encoding='utf-8') as output_file:
+    output_file.write('this is a simulated plot')
+
+with open(plot2_path, 'w', encoding='utf-8') as output_file:
+    output_file.write('this is a simulated plot')
+
+with open(plot3_path, 'w', encoding='utf-8') as output_file:
+    output_file.write('this is a simulated plot')
 
 print('succesfully executed collect_h5.py')
