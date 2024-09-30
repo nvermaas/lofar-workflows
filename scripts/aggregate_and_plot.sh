@@ -1,6 +1,6 @@
-#!/usr/bin/sh
+#!/usr/bin/sh -e
 
-ls > test.txt
+ls > script_runs.txt
 
 if [ -d "toil_venv" ]; then
     echo "Activating existing virtual environment."
@@ -14,3 +14,5 @@ else
 fi
 export SINGULARITY_BIND="$PWD:/mnt/workdir,/project:/project"
 toil-cwl-runner --singularity imaging_compress_pipeline.git/aggregate_and_plot.cwl
+
+ls
