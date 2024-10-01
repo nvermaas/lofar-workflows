@@ -1,2 +1,2 @@
 
-ls > outputs.txt
+ls >> outputs.txt
